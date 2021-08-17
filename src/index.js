@@ -4,12 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import TodoContainer from "./TodoContainer"
+import TodoContainer from "./TodoContainer";
+import CompLife from './CompLife';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
     <TodoContainer />, 
+    <CompLife/>,
   </React.StrictMode>,
  
   document.getElementById('root')
