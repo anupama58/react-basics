@@ -7,18 +7,28 @@ class TodoContainer extends React.Component {
         todos: [
             {
             id: 1,
-            title: "Setup development environment",
+            title: "What is React",
             completed: true
             },
             {
             id: 2,
-            title: "Develop website and add content",
+            title: "Virtual DOM",
             completed: false
             },
             {
             id: 3,
-            title: "Deploy to live server",
+            title: "React hello world app (Please push to GitHub)",
             completed: false
+            },
+            {
+              id:4,
+              title: "State and Props",
+              completed: false
+            },
+            {
+              id:5,
+              title: "Component and different type of components",
+              completed: false
             }
         ]
     };
@@ -30,9 +40,8 @@ class TodoContainer extends React.Component {
         //     ))}
         // </ul>
         <div>
-                 <Header />
+            <Header />
             <TodoList todos={this.state.todos} />
-
         </div>
     )
   }
