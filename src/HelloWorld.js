@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import List from './List.js';
-//import useLocalStorage from './useLocalStorage.js';
+import useLocalStorage from './useLocalStorage.js';
 const HelloWorld = () =>{
 
     const [counter, setCounter] = useState(0);
@@ -9,7 +9,7 @@ const HelloWorld = () =>{
     const [number,setNumber] = useState(1);
     const [dark,setDark] = useState(false);
     const inputRef = useRef();
-    //const [name,setName] =useLocalStorage('name','');
+    const [name,setName] =useLocalStorage('name','');
 
 
 
@@ -52,9 +52,9 @@ const HelloWorld = () =>{
             <p></p>
             My name is  {currentInput}
 
-            {/* <p>Custom Hook-stores value in localStorage, value won't go even after refreshing page</p>
+            <p>Custom Hook-stores value in localStorage, value won't go even after refreshing page</p>
             <input placeholder ="explains custom hook" type="text" value={name} onChange={e=>setName(e.target.value)}></input>
-             */}
+            
            
             
             <p></p>
