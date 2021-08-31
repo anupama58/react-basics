@@ -7,9 +7,16 @@ import reportWebVitals from './reportWebVitals';
 import TodoContainer from "./TodoContainer";
 import CompLife from './CompLife';
 
+import { createStore} from 'redux'
+import { Provider } from 'react-redux'
+import reducer from './reducers'
+const store = createStore(reducer)
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>,
     <TodoContainer />, 
     <CompLife/>,
   </React.StrictMode>,

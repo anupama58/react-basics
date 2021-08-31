@@ -2,7 +2,8 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import List from './List.js';
 import useLocalStorage from './useLocalStorage.js';
-const HelloWorld = () =>{
+
+const HelloWorld = ({ whatsUp }) =>{
 
     const [counter, setCounter] = useState(0);
     const [currentInput,setInput] = useState();
@@ -47,6 +48,9 @@ const HelloWorld = () =>{
 
         <div style={theme}>
             <button onClick={sayHello}>Click Me!</button>
+            <button>Click for Redux action</button>
+            <h2>{whatsUp}</h2>
+   
             <p>How many times i clicked {counter}</p>     
             <input ref={inputRef}  placeholder='Enter here'  onChange={changeInput}></input>
             <p></p>
